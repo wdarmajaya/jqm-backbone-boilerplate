@@ -1,0 +1,84 @@
+<!doctype html>
+<html >
+<head>
+	<title>Backbone.js, Require.js, and jQuery Mobile</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="libs/jquery.mobile.min.css">
+      <link rel="stylesheet" href="libs/bootstrap.min.css">
+      <link rel="stylesheet" href="css/my.css">
+      <script src="libs/require.js" data-main="js/main"></script>
+</head>
+<body>
+
+<!-- Header -->
+<div data-role="header"  data-position="fixed" data-tap-toggle="false" class="visible-xs my-header" >
+      <h2><img src="img/jquery-logo.png" alt="jQuery Mobile"></h2>
+      <a href="#my-panel" class="my-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+</div><!-- /header mobile -->
+
+<div data-role="header" class="hidden-xs my-header">
+      <h2><img src="img/jquery-logo.png" alt="jQuery Mobile"></h2>
+</div><!-- /header desktop -->
+
+<!-- Menu Panel -->
+<div id="my-panel" data-role="panel" class="my-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
+      <ul class="my-list ui-alt-icon ui-nodisc-icon">
+            <li data-icon="home" class="ui-alt-icon"><a href="#" data-transition="none">Home</a></li>
+            <li><a href="#category?animals" class="animals">Animals</a></li>
+            <li><a href="#category?colors" class="colors">Colors</a></li>
+            <li><a href="#category?vehicles" class="vehicles">Vehicles</a></li>        
+    </ul>
+</div><!-- /panel -->
+
+
+<div id="categories" data-role="page" data-title="Categories" class="my-app my-home">
+    
+      <div role="main" class="ui-content my-content">
+            <h2>Home</h2>
+            Boilerplate application based on <a href='http://demos.jquerymobile.com/1.4.2/backbone-requirejs/'>this</a> example using the following frameworks:            
+            <ul data-role="listview" data-inset="true">
+                  <li><a href="#category?animals" class="animals">JQuery Mobile</a></li>
+                  <li><a href="#category?colors" class="colors">Backbone</a></li>
+                  <li><a href="#category?vehicles" class="vehicles">Require</a></li>
+                  <li><a href="#category?vehicles" class="vehicles">Handlebars</a></li>
+                  <li><a href="#category?vehicles" class="vehicles">Bootstrap</a></li>
+                  <li><a href="#category?vehicles" class="vehicles">Underscore</a></li>
+            </ul>
+      </div><!-- /content -->
+
+</div>
+
+<div id="animals" data-role="page" data-title="Animals" class="my-app my-home">
+      
+      <div role="main" class="ui-content my-content">
+            <h2>Animals</h2>
+      </div><!-- /content -->
+</div>
+
+<div id="colors" data-role="page" data-title="Colors" class="my-app my-home">
+
+      <div role="main" class="ui-content my-content">
+            <h2>Colors</h2>
+      </div><!-- /content -->
+
+</div>
+
+<div id="vehicles" data-role="page" data-title="Vehicles" class="my-app my-home">
+
+      <div role="main" class="ui-content my-content">
+            <h2>Vehicles</h2>
+      </div><!-- /content -->
+
+</div>
+
+<!-- Footer -->
+<div data-role="footer" data-theme="a">
+      <div class="my-footer">
+            <p>jQuery Mobile Demos version</p>
+            <p>Copyright 2014 The jQuery Foundation</p>
+      </div>
+</div>
+
+</body>
+</html>
