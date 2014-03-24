@@ -1,7 +1,7 @@
 /* Header */
 .my-header {
 	background: #fff;
-	border-top: 4px solid #3eb249;
+	border-top: 4px solid #013668;
 	border-bottom-color: #eee;
 }
 .my-header h2 {
@@ -51,7 +51,7 @@
 	padding-bottom: 0;
 }
 .my-footer {
-	border-top: 1px solid #3eb249;
+	border-top: 1px solid #013668;
 	height: 100px;
 }
 .my-footer p {
@@ -69,9 +69,6 @@
 }
 
 /* Content */
-.my-content {
-	min-height: 600px;
-}
 .my-app .my-content {
 	padding-top: 3em;
 }
@@ -89,7 +86,7 @@
 	margin: 0 0 .625em;
 }
 .my-app .my-content > h2 {
-	color: #3eb249;
+	color: #013668;
 	background-color: transparent;
 	border-bottom: 1px solid #ddd;
 	font-size: 1.6em;
@@ -209,6 +206,14 @@
 /* Desktop */
 @media (min-width: 768px) {
 
+	.my-home {
+	    min-height:80% !important;
+	    height:auto !important;
+	}
+
+	.ui-panel {
+		min-height: 0px;
+	}
 	.ui-page-header-fixed {
 		padding-top: 0;
 	}
@@ -222,8 +227,8 @@
 		text-align: left;
 	}
 	.my-header h2 img {
-		width: 275px;
-		height: 78px;
+		width: 350px;
+		height: 65px;
 	}
 	.my-header p {
 		bottom: auto;
@@ -276,15 +281,7 @@
 		padding-top: 2em;
 		padding-left: 3%;
 		padding-right: 3%;
-		/*float: right;*/
 	}	
-/*	.my-app .my-content {
-		width: 67%;
-		padding-top: 2em;
-		padding-left: 0;
-		padding-right: 3%;
-		float: right;
-	}*/
 	.my-navmenu-panel .ui-listview .ui-btn {
 		padding-left: 12.5%;
 	}
