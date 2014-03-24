@@ -30,10 +30,41 @@ require.config( {
 require([
 	"jquery",
 	"backbone",
-	"routers/mobileRouter"
-], function ( $, Backbone, Mobile ) {
+	"routers/mobileRouter",
+	"global"
+], function ( $, Backbone, Mobile, Global ) {
+
+	///////////////////////////
+	//Phonegap Init
+    document.addEventListener("deviceready", 
+    	function () {
+		    window.console && console.log("onDeviceReady");
+		    alert("onDeviceReady");
+		    $(".hidden-phonegap").remove();
+		    $(".fullwidth-phonegap").width("100%");
+		    if (window.PhoneGap || window.cordova) {
+		        //TODO checkAppVersion();
+		    }
+		    var gaPlugin = window.plugins.gaPlugin;
+		    gaPlugin.init(gaPluginResultHandler, gaPluginErrorHandler, GA_ID_APP, 10);
+
+			function gaPluginResultHandler(result) {
+			    //window.console && console.log('gaPluginResultHandler - ' + result);
+			    alert('gaPluginResultHandler - ' + result);
+			}
+
+			function gaPluginErrorHandler(error) {
+			    //window.console && console.log('gaPluginErrorHandler - ' + error);
+			    alert('gaPluginErrorHandler - ' + error);
+			}
+
+		}, 
+    	true
+	);
 
 
+	///////////////////////////
+	//JQM Init
 	$( document ).on( "mobileinit",
 
 		// Set up the "mobileinit" handler before requiring jQuery Mobile's module
@@ -51,7 +82,7 @@ require([
 			$( ".my-navmenu-panel ul" ).listview();
 
 		}
-	)
+	);
 
 	require( [ "jquerymobile" ], function () {
 
