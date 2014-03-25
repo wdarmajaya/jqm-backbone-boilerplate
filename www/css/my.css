@@ -16,7 +16,7 @@
 .my-header h2 a {
 	display: inline-block;
 	text-decoration: none;
-	min-height: 40px;
+	/*min-height: 40px;*/
 }
 .my-header h2 img {
 	display: block;

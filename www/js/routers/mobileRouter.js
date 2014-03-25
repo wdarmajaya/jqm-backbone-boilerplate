@@ -5,10 +5,13 @@
 define([
 	"jquery",
 	"backbone",
+    "../global",
+    "../events",
+    "../utils",
 	"../models/CategoryModel",
 	"../collections/CategoriesCollection",
 	"../views/CategoryView"
-], function( $, Backbone, CategoryModel, CategoriesCollection, CategoryView ) {
+], function( $, Backbone, Global, Events, Utils, CategoryModel, CategoriesCollection, CategoryView ) {
 
     // Extends Backbone.Router
     var CategoryRouter = Backbone.Router.extend( {
@@ -37,13 +40,14 @@ define([
             "": "home",
 
             // When #category? is on the url, the category method is called
-            "category?:type": "category"
+            "category?:type": "category",
+
+            "pdfdownload": "pdfdownload"
 
         },
 
         // Home method
         home: function() {
-
             // Programatically changes to the categories page
             $.mobile.changePage( "#categories" , { reverse: false, changeHash: false } );
 
@@ -79,6 +83,10 @@ define([
 
             }
 
+        },
+
+        pdfdownload: function() {
+            $.mobile.changePage( "#pdfdownload" , { reverse: false, changeHash: false } );            
         }
 
     } );

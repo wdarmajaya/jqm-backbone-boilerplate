@@ -29,15 +29,6 @@ define([
             var html = template(this.collection.toJSON());
             this.$el.find(".my-content").html(html);
 
-            //this.template = _.template( $( "script#categoryItems" ).html(), { "collection": this.collection } );
-            // var template = Handlebars.compile($( "#categoryItems" ).html());
-            // var html = template(this.collection.toJSON());
-            // this.$el.find(".my-content").html(html);
-            //this.$el.find("ul").html(html);
-            //this.template = Handlebars.compile($( "#categoryItems" ).html(), { "collection": this.collection });
-            // Renders the view's template inside of the current listview element
-            //this.$el.find("ul").html(this.template);
-
             // Maintains chainability
             return this;
 
