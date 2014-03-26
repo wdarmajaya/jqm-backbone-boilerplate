@@ -30,12 +30,12 @@ require.config( {
 require([
 	"jquery",
 	"backbone",
-	"routers/mobileRouter"
-], function ( $, Backbone, Mobile ) {
+	"router"
+], function ( $, Backbone, Router ) {
 
 	require( [ "jquerymobile" ], function () {
 
 		// Instantiates a new Backbone.js Mobile Router
-		this.router = new Mobile();
+		this.router = new Router();
 	});
 });

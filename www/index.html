@@ -18,8 +18,6 @@
 </head>
 <body>
 
-<!-- Header -->
-
 <!-- Header Mobile -->
 <div data-role="header"  data-position="fixed" data-tap-toggle="false" class="visible-xs my-header" >
       <h2 class="my-header-logo"></h2>
@@ -29,84 +27,25 @@
 <!-- Header Desktop -->
 <div data-role="header" class="hidden-xs my-header">
       <h2 class="my-header-logo"></h2>
-</div><!-- /Header Desktop -->
+</div>
 
 <!-- Menu Panel -->
-<div id="my-panel" data-role="panel" class="my-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
-      <ul class="my-list ui-alt-icon ui-nodisc-icon">
-            <li data-icon="home" class="ui-alt-icon"><a href="#" data-transition="none">Home</a></li>
-            <li><a href="#category?animals" class="animals">Animals</a></li>
-            <li><a href="#category?colors" class="colors">Colors</a></li>
-            <li><a href="#category?vehicles" class="vehicles">Vehicles</a></li>      
-            <li><a href="#pdfdownload">Test PDF Download</a></li>
-    </ul>
-</div><!-- /Menu Panel -->
+<div id="my-panel" data-role="panel" class="my-navmenu-panel" data-position="left" data-display="overlay" data-theme="a"></div>
 
-<!-- Categories Page -->
-<div id="categories" data-role="page" data-title="Categories" class="my-app my-home">
-    
-      <div role="main" class="ui-content my-content">
-            <h2>Home</h2>
+<!-- Pages -->
+<div id="categories" data-role="page" data-title="Categories" class="my-app my-home"></div>
 
-            <p>This is a boilerplate web application based on the <a class="my-external-link" href="http://demos.jquerymobile.com/1.4.2/backbone-requirejs/">example</a> technique suggested by jQuery Mobile (JQM) to utilize Backbone.js and Require.js to help structure the code. This app is responsive and can be accessed from both desktop browsers and mobile browsers, and in addition, it can be packaged as native apps (ios and android) using Phonegap.</p>
+<div id="animals" data-role="page" data-title="Animals" class="my-app my-home"></div>
 
-            <br/>
-            <h2>Frameworks used</h2>
-            <p><a class="my-external-link" href="http://jquerymobile.com">jQuery Mobile</a> is a HTML5-based user interface system designed to make responsive web sites and apps that are accessible on all smartphone, tablet and desktop devices.</p>
+<div id="colors" data-role="page" data-title="Colors" class="my-app my-home"></div>
 
-            <p><a class="my-external-link" href="http://backbonejs.org">Backbone.js</a> is a great client-side MV* JavaScript framework that provides structure to JavaScript applications by providing View, Model, Collection, Router, and Event class objects.</p>
+<div id="vehicles" data-role="page" data-title="Vehicles" class="my-app my-home"></div>
 
-            <p><a class="my-external-link" href="http://requirejs.org/">Require.js</a> is an AMD (Asynchronous Module Definition) script loader that asynchronously loads your JavaScript to improve page load performance, while also helping with script dependency managagement and allowing you to organize your JavaScript into self contained modules (files).</p>
+<div id="pdfdownload" data-role="page" data-title="PDF Download" class="my-app my-home"></div>
 
-            <p><a class="my-external-link" href="http://handlebarsjs.com/">Handlebars</a> provides the power necessary to let you build semantic templates effectively with no frustration.</p>
-            
-            <p><a class="my-external-link" href="http://getbootstrap.com/">Bootstrap</a> is the most popular front-end framework for developing responsive, mobile first projects on the web.</p>
-
-            <p><a class="my-external-link" href="http://phonegap.com">PhoneGap</a> is a free and open source framework that allows you to create mobile apps using standardized web APIs for the platforms you care about.</p>
-
-            <h2>Design</h2>
-            <p>
-                  Responsive. 
-                  Describe Desktop view and mobile view. 
-                  Using bootstrap.css and phonegap our own css class.
-
-
-            </p>
-      </div><!-- /content -->
-</div><!-- /Categories Page -->
-
-
-<div id="animals" data-role="page" data-title="Animals" class="my-app my-home">     
-      <div role="main" class="ui-content my-content">
-      </div><!-- /content -->
-</div>
-
-<div id="colors" data-role="page" data-title="Colors" class="my-app my-home">
-      <div role="main" class="ui-content my-content">
-      </div><!-- /content -->
-</div>
-
-<div id="vehicles" data-role="page" data-title="Vehicles" class="my-app my-home">
-      <div role="main" class="ui-content my-content">
-      </div><!-- /content -->
-</div>
-
-<div id="pdfdownload" data-role="page" data-title="Test PDF Download" class="my-app my-home">
-      <div role="main" class="ui-content my-content">
-            <h2>Test PDF Download</h2>
-            <p>
-                  <a href="https://drive.google.com/file/d/0B7uZ84Old5xXWk1iZlltNFYzRk0/edit?usp=sharing" class="my-download-link">Download PDF</a>
-            </p>            
-      </div><!-- /content -->
-</div>
 
 <!-- Footer -->
-<div data-role="footer" data-theme="a">
-      <div class="my-footer">
-            <p>600 Cummings Center, Beverly, MA 01915 | 1.978.619.1300</p>
-            <p>Atlantic Tele-Network &copy; 2010</p>
-      </div>
-</div><!-- /Footer -->
+<div id="my-footer" data-role="footer" data-theme="a"></div><!-- /Footer -->
 
 </body>
 </html>

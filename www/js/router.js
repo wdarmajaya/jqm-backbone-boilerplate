@@ -3,18 +3,22 @@
 
 // Includes file dependencies
 define([
-	"jquery",
-	"backbone",
-    "../global",
-    "../events",
-    "../utils",
-	"../models/CategoryModel",
-	"../collections/CategoriesCollection",
-	"../views/CategoryView"
-], function( $, Backbone, Global, Events, Utils, CategoryModel, CategoriesCollection, CategoryView ) {
+    "jquery",
+    "backbone",
+    "global",
+    "events",
+    "utils",
+	"models/CategoryModel",
+	"collections/CategoriesCollection",
+	"views/CategoryView",
+    "views/HomeView",
+    "views/MenuPanelView",
+    "views/FooterView",
+    "views/DownloadView"
+], function($, Backbone, Global, Events, Utils, CategoryModel, CategoriesCollection, CategoryView, HomeView, MenuPanelView, FooterView, DownloadView ) {
 
     // Extends Backbone.Router
-    var CategoryRouter = Backbone.Router.extend( {
+    var Router = Backbone.Router.extend( {
 
         // The Router constructor
         initialize: function() {
@@ -27,6 +31,14 @@ define([
 
             // Instantiates a new Vehicles Category View
             this.vehiclesView = new CategoryView( { el: "#vehicles", collection: new CategoriesCollection( [] , { type: "vehicles" } ) } );
+
+            // Render static menu panel
+            var menuPanelView = new MenuPanelView( { el: "#my-panel"} );
+            menuPanelView.render();
+
+            // Render static footer
+            var footerView = new FooterView({ el: "#my-footer"});
+            footerView.render();
 
             // Tells Backbone to start watching for hashchange events
             Backbone.history.start();
@@ -48,6 +60,11 @@ define([
 
         // Home method
         home: function() {
+
+            var homeView = new HomeView( { el: "#categories" } );
+
+            homeView.render();
+            
             // Programatically changes to the categories page
             $.mobile.changePage( "#categories" , { reverse: false, changeHash: false } );
 
@@ -86,12 +103,15 @@ define([
         },
 
         pdfdownload: function() {
+
+            var downloadView = new DownloadView({ el: "#pdfdownload" });
+            downloadView.render();
             $.mobile.changePage( "#pdfdownload" , { reverse: false, changeHash: false } );            
         }
 
     } );
 
     // Returns the Router class
-    return CategoryRouter;
+    return Router;
 
 } );

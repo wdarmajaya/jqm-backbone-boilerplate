@@ -14,13 +14,13 @@ document.addEventListener("deviceready",
         gaPlugin.init(gaPluginResultHandler, gaPluginErrorHandler, GA_ID_APP, 10);
 
         function gaPluginResultHandler(result) {
-            //window.console && console.log('gaPluginResultHandler - ' + result);
-            alert('gaPluginResultHandler - ' + result);
+            window.console && console.log('gaPluginResultHandler - ' + result);
+            //alert('gaPluginResultHandler - ' + result);
         }
 
         function gaPluginErrorHandler(error) {
-            //window.console && console.log('gaPluginErrorHandler - ' + error);
-            alert('gaPluginErrorHandler - ' + error);
+            window.console && console.log('gaPluginErrorHandler - ' + error);
+            //alert('gaPluginErrorHandler - ' + error);
         }
 
     }, 
@@ -49,8 +49,7 @@ $( document ).on( "mobileinit",
 
         // Refresh the static header, footer, and menu panel
         $( "[data-role='header'], [data-role='footer']" ).toolbar();
-        $( "[data-role='panel']" ).panel();
-        $( ".my-navmenu-panel ul" ).listview();
+
     }
 );
 
@@ -75,7 +74,6 @@ $(document).on("pageshow", function () {
             window.console && console.log("_trackPageview=" + $.mobile.activePage.attr("data-url"));
             _gaq.push(['_trackPageview', $.mobile.activePage.attr("data-url")]);
             if (window.PhoneGap || window.cordova) {
-                alert("_trackPageview=" + $.mobile.activePage.attr("data-url"));
                 gaPlugin.trackPage(gaPluginResultHandler, gaPluginErrorHandler, $.mobile.activePage.attr("data-url"));
             }
         } else {
@@ -104,5 +102,3 @@ $(document).on('click', ".my-download-link", function (e) {
 
     openFile($(this).attr("href"));
 });
-
-

@@ -6,32 +6,29 @@ define([
 	"jquery",
 	"backbone",
     "handlebars",
-	"../models/CategoryModel",
-    "../../libs/text!../../tpl/CategoryTpl.html"
-], function( $, Backbone, Handlebars, CategoryModel, Template ) {
+    "../../libs/text!../../tpl/MenuPanelTpl.html"
+], function( $, Backbone, Handlebars, Template ) {
 
     // Extends Backbone.View
     var view = Backbone.View.extend( {
 
         // The View Constructor
         initialize: function() {
-
-            // The render method is called when Category Models are added to the Collection
-            this.collection.on( "added", this.render, this );
-
         },
 
         // Renders all of the Category models on the UI
         render: function() {
-
             // Sets the view's template property
             var template = Handlebars.compile(Template);            
-            var html = template(this.collection.toJSON());
+            var html = template();
             this.$el.html(html);
+
+            // Refresh the JQM elements
+            $( "[data-role='panel']" ).panel();
+            $( ".my-navmenu-panel ul" ).listview();
 
             // Maintains chainability
             return this;
-
         }
 
     } );
