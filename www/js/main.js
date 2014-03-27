@@ -14,8 +14,14 @@ require.config( {
             "fastclick": "../libs/fastclick"
       },
 
-      // Sets the configuration for your third party scripts that are not AMD compatible
+      // Sets dependencies and also the configuration for your third party scripts that are not AMD compatible
       shim: {
+
+            //jquerymobile depends on jquery
+            'jquerymobile': ['jquery'],
+
+            //backbone depends on underscore and jquery
+            'backbone': ['underscore', 'jquery'],
 
             "handlebars": {
                   "exports": "Handlebars"  //attaches "Handlebars" to the window object
@@ -26,26 +32,53 @@ require.config( {
 } );
 
 
-
 // Includes File Dependencies
-require(["jquery"], function ( $ ) {
 
-      require([ 
-            "backbone", 
-            "router", 
-            "fastclick",
-            "init", 
-            "config", 
-            "events", 
-            "utils" 
-            ], 
-            function (Backbone, Router, Fastclick, Init, Config, Events, Utils) {
+require([ 
+      "jquery",
+      "backbone", 
+      "router", 
+      "fastclick",
+      "init", 
+      "config", 
+      "events", 
+      "utils" 
+      ], 
+      function ($, Backbone, Router, Fastclick, Init, Config, Events, Utils) {
 
-            require( [ "jquerymobile" ], function (JQM) {
-                  // Instantiates a new Backbone.js Mobile Router
-                  this.router = new Router();
-            });
+      if (document.location.protocol == 'file:') { 
+            //Load Phonegap init
+            require( [ "pginit" ] );
+      }
 
+      require( [ "jquerymobile" ], function (JQM) {
+            // Instantiates a new Backbone.js Mobile Router
+            this.router = new Router();
       });
 
 });
+
+
+
+// Includes File Dependencies
+// require(["jquery"], function ( $ ) {
+
+//       require([ 
+//             "backbone", 
+//             "router", 
+//             "fastclick",
+//             "init", 
+//             "config", 
+//             "events", 
+//             "utils" 
+//             ], 
+//             function (Backbone, Router, Fastclick, Init, Config, Events, Utils) {
+
+//             require( [ "jquerymobile" ], function (JQM) {
+//                   // Instantiates a new Backbone.js Mobile Router
+//                   this.router = new Router();
+//             });
+
+//       });
+
+// });

@@ -3,26 +3,31 @@
 
 // Includes file dependencies
 define([
-
-	"collections/CategoriesCollection",
-	"views/CategoryView",
-    "views/HomeView",
-    "views/MenuPanelView",
-    "models/FooterModel",    
-    "views/FooterView",
-    "views/DownloadView",
+    "jquery",
+    "backbone",
+    "jquerymobile",
+    "views/HeaderView",
     "models/HeaderModel",
-    "views/HeaderView"
+    "views/MenuPanelView",
+    "views/FooterView",
+    "models/FooterModel",    
+    "views/CategoryView",        
+	"collections/CategoriesCollection",
+    "views/HomeView",
+    "views/DownloadView"
 ], function( 
-    CategoriesCollection, 
-    CategoryView, 
-    HomeView, 
-    MenuPanelView, 
-    FooterModel, 
-    FooterView, 
-    DownloadView,
+    $,
+    Backbone,
+    JQM,
+    HeaderView,
     HeaderModel,
-    HeaderView
+    MenuPanelView, 
+    FooterView, 
+    FooterModel,
+    CategoryView,
+    CategoriesCollection, 
+    HomeView, 
+    DownloadView
     ) {
 
     // Extends Backbone.Router
