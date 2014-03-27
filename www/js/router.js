@@ -3,25 +3,49 @@
 
 // Includes file dependencies
 define([
-    "jquery",
-    "backbone",
-    "global",
-    "events",
-    "utils",
-	"models/CategoryModel",
+
 	"collections/CategoriesCollection",
 	"views/CategoryView",
     "views/HomeView",
     "views/MenuPanelView",
+    "models/FooterModel",    
     "views/FooterView",
-    "views/DownloadView"
-], function($, Backbone, Global, Events, Utils, CategoryModel, CategoriesCollection, CategoryView, HomeView, MenuPanelView, FooterView, DownloadView ) {
+    "views/DownloadView",
+    "models/HeaderModel",
+    "views/HeaderView"
+], function( 
+    CategoriesCollection, 
+    CategoryView, 
+    HomeView, 
+    MenuPanelView, 
+    FooterModel, 
+    FooterView, 
+    DownloadView,
+    HeaderModel,
+    HeaderView
+    ) {
 
     // Extends Backbone.Router
     var Router = Backbone.Router.extend( {
 
         // The Router constructor
         initialize: function() {
+
+            // Render header
+            var headerMobileView = new HeaderView( { el: "#my-header-mobile", model: new HeaderModel() } );
+            headerMobileView.render();
+
+            // Render header
+            var headerDesktopView = new HeaderView( { el: "#my-header-desktop", model: new HeaderModel() } );
+            headerDesktopView.render();
+
+            // Render static menu panel
+            var menuPanelView = new MenuPanelView( { el: "#my-panel"} );
+            menuPanelView.render();
+
+            // Render static footer
+            var footerView = new FooterView( { el: "#my-footer", model: new FooterModel() } );
+            footerView.render();
 
             // Instantiates a new Animal Category View
             this.animalsView = new CategoryView( { el: "#animals", collection: new CategoriesCollection( [] , { type: "animals" } ) } );
@@ -31,14 +55,6 @@ define([
 
             // Instantiates a new Vehicles Category View
             this.vehiclesView = new CategoryView( { el: "#vehicles", collection: new CategoriesCollection( [] , { type: "vehicles" } ) } );
-
-            // Render static menu panel
-            var menuPanelView = new MenuPanelView( { el: "#my-panel"} );
-            menuPanelView.render();
-
-            // Render static footer
-            var footerView = new FooterView({ el: "#my-footer"});
-            footerView.render();
 
             // Tells Backbone to start watching for hashchange events
             Backbone.history.start();
@@ -61,12 +77,12 @@ define([
         // Home method
         home: function() {
 
-            var homeView = new HomeView( { el: "#categories" } );
+            var homeView = new HomeView( { el: "#home" } );
 
             homeView.render();
             
-            // Programatically changes to the categories page
-            $.mobile.changePage( "#categories" , { reverse: false, changeHash: false } );
+            // Programatically changes to the home page
+            $.mobile.changePage( "#home" , { reverse: false, changeHash: false } );
 
         },
 

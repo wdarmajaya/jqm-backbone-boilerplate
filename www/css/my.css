@@ -49,6 +49,10 @@
 	filter: Alpha(Opacity=40);
 }
 
+.ui-header .ui-title {
+	text-overflow: clip;
+}	
+
 /* Footer */
 .my-footer.ui-footer {
 	position: absolute;

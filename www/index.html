@@ -4,6 +4,7 @@
 	<title>Backbone.js, Require.js, and jQuery Mobile</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="stylesheet" href="libs/jquery.mobile.min.css">
       <link rel="stylesheet" href="libs/bootstrap.min.css">
       <link rel="stylesheet" href="css/my.css">
@@ -12,40 +13,28 @@
       <script type="text/javascript" src="phonegap.js"></script>
       <script type="text/javascript" src="GAPlugin.js"></script>
       <script type="text/javascript" src="childbrowser.js"></script>
-
+      
       <!-- Require -->
       <script src="libs/require.js" data-main="js/main"></script>
 </head>
 <body>
 
-<!-- Header Mobile -->
-<div data-role="header"  data-position="fixed" data-tap-toggle="false" class="visible-xs my-header" >
-      <h2 class="my-header-logo"></h2>
-      <a href="#my-panel" class="my-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
-</div><!-- /Header Mobile -->
-
-<!-- Header Desktop -->
-<div data-role="header" class="hidden-xs my-header">
-      <h2 class="my-header-logo"></h2>
-</div>
+<!-- Headers -->
+<div id="my-header-desktop" data-role="header" class="hidden-xs my-header"></div>
+<div id="my-header-mobile" data-role="header"  data-position="fixed" data-tap-toggle="false" class="visible-xs my-header"></div>
 
 <!-- Menu Panel -->
 <div id="my-panel" data-role="panel" class="my-navmenu-panel" data-position="left" data-display="overlay" data-theme="a"></div>
 
 <!-- Pages -->
-<div id="categories" data-role="page" data-title="Categories" class="my-app my-home"></div>
-
+<div id="home" data-role="page" data-title="Home" class="my-app my-home"></div>
 <div id="animals" data-role="page" data-title="Animals" class="my-app my-home"></div>
-
 <div id="colors" data-role="page" data-title="Colors" class="my-app my-home"></div>
-
 <div id="vehicles" data-role="page" data-title="Vehicles" class="my-app my-home"></div>
-
 <div id="pdfdownload" data-role="page" data-title="PDF Download" class="my-app my-home"></div>
 
-
 <!-- Footer -->
-<div id="my-footer" data-role="footer" data-theme="a"></div><!-- /Footer -->
+<div id="my-footer" data-role="footer" data-theme="a"></div>
 
 </body>
 </html>

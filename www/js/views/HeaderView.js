@@ -6,8 +6,8 @@ define([
 	"jquery",
 	"backbone",
     "handlebars",
-    "../models/FooterModel",
-    "../../libs/text!../../tpl/FooterTpl.html"
+    "../models/HeaderModel",
+    "../../libs/text!../../tpl/HeaderTpl.html"
 ], function( $, Backbone, Handlebars, Model, Template ) {
 
     // Extends Backbone.View
@@ -24,8 +24,8 @@ define([
             var html = template(this.model.toJSON());
             this.$el.html(html);
 
-            // Refresh footer
-            $( "[data-role='footer']" ).toolbar();
+            // Refresh
+            $( "[data-role='header']" ).toolbar();
 
             // Maintains chainability
             return this;

@@ -10,7 +10,8 @@ require.config( {
             "underscore": "../libs/underscore",
             "backbone": "../libs/backbone",
             "handlebars": "../libs/handlebars",
-            "underscoretext": "../libs/text"
+            "underscoretext": "../libs/text",
+            "fastclick": "../libs/fastclick"
       },
 
       // Sets the configuration for your third party scripts that are not AMD compatible
@@ -27,15 +28,24 @@ require.config( {
 
 
 // Includes File Dependencies
-require([
-	"jquery",
-	"backbone",
-	"router"
-], function ( $, Backbone, Router ) {
+require(["jquery"], function ( $ ) {
 
-	require( [ "jquerymobile" ], function () {
+      require([ 
+            "backbone", 
+            "router", 
+            "fastclick",
+            "init", 
+            "config", 
+            "events", 
+            "utils" 
+            ], 
+            function (Backbone, Router, Fastclick, Init, Config, Events, Utils) {
 
-		// Instantiates a new Backbone.js Mobile Router
-		this.router = new Router();
-	});
+            require( [ "jquerymobile" ], function (JQM) {
+                  // Instantiates a new Backbone.js Mobile Router
+                  this.router = new Router();
+            });
+
+      });
+
 });
