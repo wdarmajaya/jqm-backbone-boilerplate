@@ -1,10 +1,27 @@
 <div role="main" class="ui-content my-content">
 	<h2>Home</h2>
-
-	<p>This is a boilerplate web application based on the <a class="my-external-link" href="http://demos.jquerymobile.com/1.4.2/backbone-requirejs/">example</a> technique suggested by jQuery Mobile (JQM) to utilize Backbone.js and Require.js to help structure the code. This app is responsive and can be accessed from both desktop browsers and mobile browsers, and in addition, it can be packaged as native apps (ios and android) using Phonegap.</p>
+	<p><b>About This App</b></p>
+	<p>This is a boilerplate web application based on the <a class="my-external-link" href="http://demos.jquerymobile.com/1.4.2/backbone-requirejs/">example</a> technique suggested by jQuery Mobile (JQM) to utilize Backbone.js and Require.js with JQM to help structure the code. This app is designed based on <a class="my-external-link" href="http://demos.jquerymobile.com/1.4.2/">JQuery Mobile demo page</a></p>
 
 	<br/>
-	<h2>Frameworks used</h2>
+
+	<h2>Additional Features</h2>
+	<p><b>Responsive</b></p>
+	<p>Using media query, Bootstrap responsive utilities css classes (.visible-xs, .hidden-xs, etc), and PhoneGap device plugin (window.PhoneGap) for showing and hiding content by device. On desktop view, menu panel is displayed on left side. On mobile view, menu panel is hidden, menu icon is added to header, and header is fixed on top of screen. On PhoneGap, external links (including links to PDF file) are opened within the app (using inappbrowser plugin) instead of phone’s browser so user doesn’t have to leave the app.</p>
+
+	<br/>
+
+	<p><b>PhoneGap</b></p>
+	<p>Can be packaged as iOS and Android app using PhoneGap. We subscribe to the build service (build.phonegap.com) and to build an app just need to zip www folder and import, or connect via GitHub. Download the apps <a class="my-external-link" href="https://build.phonegap.com/apps/820816/share">here</a>.</p>
+
+	<br/>
+
+	<p><b>Google Analytics</b></p>
+	<p>Implemented using 2 different tracking IDs (for web site data and for mobile app data).</p>
+
+
+	<br/>
+	<h2>Frameworks/Libraries used</h2>
 	<p><a class="my-external-link" href="http://jquerymobile.com">jQuery Mobile</a> is a HTML5-based user interface system designed to make responsive web sites and apps that are accessible on all smartphone, tablet and desktop devices.</p>
 
 	<p><a class="my-external-link" href="http://backbonejs.org">Backbone.js</a> is a great client-side MV* JavaScript framework that provides structure to JavaScript applications by providing View, Model, Collection, Router, and Event class objects.</p>
@@ -17,11 +34,11 @@
 
 	<p><a class="my-external-link" href="http://phonegap.com">PhoneGap</a> is a free and open source framework that allows you to create mobile apps using standardized web APIs for the platforms you care about.</p>
 
-	<br/><br/>
-	<h2>Design</h2>
-	<p>
-	      Responsive. 
-	      Describe Desktop view and mobile view. 
-	      Using bootstrap.css and phonegap our own css class.
-	</p>
+	<p><a class="my-external-link" href="https://github.com/ftlabs/fastclick">fastclick</a>. Polyfill to remove click delays on browsers with touch UIs.</p>
+
+	<p><a class="my-external-link" href="http://github.hubspot.com/offline/docs/welcome/">offline.js</a> is a library to automatically alert your users when they've lost internet connectivity, like Gmail.</p>
+
+	<p><a class="my-external-link" href="http://www.google.com/analytics/">Google Analytics</a></p>
+
+
 </div><!-- /content -->
