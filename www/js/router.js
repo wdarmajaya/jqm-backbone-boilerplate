@@ -48,6 +48,14 @@ define([
             var menuPanelView = new MenuPanelView( { el: "#my-panel"} );
             menuPanelView.render();
 
+            // Render static home page
+            var homeView = new HomeView( { el: "#home" } );
+            homeView.render();
+
+            // Render download page
+            var downloadView = new DownloadView({ el: "#pdfdownload" });
+            downloadView.render();
+
             // Render static footer
             var footerView = new FooterView( { el: "#my-footer", model: new FooterModel() } );
             footerView.render();
@@ -82,10 +90,6 @@ define([
         // Home method
         home: function() {
 
-            var homeView = new HomeView( { el: "#home" } );
-
-            homeView.render();
-            
             // Programatically changes to the home page
             $.mobile.changePage( "#home" , { reverse: false, changeHash: false } );
 
@@ -125,8 +129,6 @@ define([
 
         pdfdownload: function() {
 
-            var downloadView = new DownloadView({ el: "#pdfdownload" });
-            downloadView.render();
             $.mobile.changePage( "#pdfdownload" , { reverse: false, changeHash: false } );            
         }
 

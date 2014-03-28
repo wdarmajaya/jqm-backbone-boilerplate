@@ -46,9 +46,11 @@ require([
       ], 
       function ($, Backbone, Router, Fastclick, Init, Config, Events, Utils) {
 
+      //if Phonegap/Cordova app
       if (document.location.protocol == 'file:') { 
-            //Load Phonegap init
-            require( [ "pginit" ] );
+            require( [ "pginit" ], function (PgInit) {
+                  console.log ("pginit required");
+            } );
       }
 
       require( [ "jquerymobile" ], function (JQM) {
@@ -57,28 +59,3 @@ require([
       });
 
 });
-
-
-
-// Includes File Dependencies
-// require(["jquery"], function ( $ ) {
-
-//       require([ 
-//             "backbone", 
-//             "router", 
-//             "fastclick",
-//             "init", 
-//             "config", 
-//             "events", 
-//             "utils" 
-//             ], 
-//             function (Backbone, Router, Fastclick, Init, Config, Events, Utils) {
-
-//             require( [ "jquerymobile" ], function (JQM) {
-//                   // Instantiates a new Backbone.js Mobile Router
-//                   this.router = new Router();
-//             });
-
-//       });
-
-// });

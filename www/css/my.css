@@ -3,6 +3,10 @@
     height:auto !important;
 }
 
+.my-header-logo {
+    margin: 0 !important;
+}
+
 /* Header */
 .my-header {
 	background: #fff;
@@ -48,10 +52,6 @@
 	opacity: .4;
 	filter: Alpha(Opacity=40);
 }
-
-.ui-header .ui-title {
-	text-overflow: clip;
-}	
 
 /* Footer */
 .my-footer.ui-footer {

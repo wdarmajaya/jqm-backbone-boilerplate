@@ -12,7 +12,8 @@ define([
     var Model = Backbone.Model.extend( {
     	defaults: {
 	    	"propertyName": config.propertyName,
-	    	"propertyContactPhone": config.propertyContactPhone,
+	    	"propertyContactPhoneLink": config.propertyContactPhoneLink,
+            "propertyContactPhoneDisplay": config.propertyContactPhoneDisplay,
 	    	"propertyStreetAddress": config.propertyStreetAddress    		
     	}
     } );
