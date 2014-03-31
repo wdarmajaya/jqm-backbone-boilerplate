@@ -24,31 +24,29 @@ define([
         // Sample JSON data that in a real app will most likely come from a REST web service
         jsonArray: [
 
-            { "category": "animals", "type": "Pets" },
+            { "category": "advantage", "type": "Customers Come First" },
 
-            { "category": "animals", "type": "Farm Animals" },
+            { "category": "advantage", "type": "Disciplined and Prudent Financial Management" },
 
-            { "category": "animals", "type": "Wild Animals" },
+            { "category": "advantage", "type": "Long Term Focus" },
 
-            { "category": "colors", "type": "Blue" },
+            { "category": "advantage", "type": "Emphasis on Local Management" },
 
-            { "category": "colors", "type": "Green" },
+            { "category": "network", "type": "GT&T" },
 
-            { "category": "colors", "type": "Orange" },
+            { "category": "network", "type": "MIO" },
 
-            { "category": "colors", "type": "Purple" },
+            { "category": "network", "type": "Choice Wireless" },
 
-            { "category": "colors", "type": "Red" },
+            { "category": "network", "type": "Islandcom" },
 
-            { "category": "colors", "type": "Yellow" },
+            { "category": "network", "type": "CellOne Bermuda" },
 
-            { "category": "colors", "type": "Violet" },
+            { "category": "network", "type": "Sovernet" },
 
-            { "category": "vehicles", "type": "Cars" },
+            { "category": "network", "type": "ION" },
 
-            { "category": "vehicles", "type": "Planes" },
-
-            { "category": "vehicles", "type": "Construction" }
+            { "category": "network", "type": "Commnet" }
 
         ],
 

@@ -40,4 +40,12 @@ define([
         utils.openLinkExternal($(this).attr("href"));
     });
 
+    //Capture click event for my-external-file class
+    $(document).on('click', ".my-external-file", function (e) {
+
+        //prevent href from being executed by JQM
+        e.preventDefault();
+        utils.openFileExternal($(this).attr("href"));
+    });
+
 } );

@@ -11,10 +11,12 @@ define([
     "views/MenuPanelView",
     "views/FooterView",
     "models/FooterModel",    
-    "views/CategoryView",        
 	"collections/CategoriesCollection",
     "views/HomeView",
-    "views/DownloadView"
+    "views/InvestorView",
+    "views/AboutView",
+    "views/AdvantageView",
+    "views/NetworkView"
 ], function( 
     $,
     Backbone,
@@ -24,10 +26,12 @@ define([
     MenuPanelView, 
     FooterView, 
     FooterModel,
-    CategoryView,
     CategoriesCollection, 
     HomeView, 
-    DownloadView
+    InvestorView,
+    AboutView,
+    AdvantageView,
+    NetworkView
     ) {
 
     // Extends Backbone.Router
@@ -52,22 +56,23 @@ define([
             var homeView = new HomeView( { el: "#home" } );
             homeView.render();
 
-            // Render download page
-            var downloadView = new DownloadView({ el: "#pdfdownload" });
-            downloadView.render();
+            // Render static about us page
+            var aboutView = new AboutView( { el: "#about" } );
+            aboutView.render();
+
+            // Render investor page
+            var investorView = new InvestorView({ el: "#investor" });
+            investorView.render();
 
             // Render static footer
             var footerView = new FooterView( { el: "#my-footer", model: new FooterModel() } );
             footerView.render();
 
-            // Instantiates a new Animal Category View
-            this.animalsView = new CategoryView( { el: "#animals", collection: new CategoriesCollection( [] , { type: "animals" } ) } );
+            // Instantiates a new Advantage Category View
+            this.advantageView = new AdvantageView( { el: "#advantage", collection: new CategoriesCollection( [] , { type: "advantage" } ) } );
 
-            // Instantiates a new Colors Category View
-            this.colorsView = new CategoryView( { el: "#colors", collection: new CategoriesCollection( [] , { type: "colors" } ) } );
-
-            // Instantiates a new Vehicles Category View
-            this.vehiclesView = new CategoryView( { el: "#vehicles", collection: new CategoriesCollection( [] , { type: "vehicles" } ) } );
+            // Instantiates a new Network Category View
+            this.networkView = new NetworkView( { el: "#network", collection: new CategoriesCollection( [] , { type: "network" } ) } );
 
             // Tells Backbone to start watching for hashchange events
             Backbone.history.start();
@@ -80,10 +85,12 @@ define([
             // When there is no hash bang on the url, the home method is called
             "": "home",
 
+            "about": "about",
+
             // When #category? is on the url, the category method is called
             "category?:type": "category",
 
-            "pdfdownload": "pdfdownload"
+            "investor": "investor"
 
         },
 
@@ -92,6 +99,12 @@ define([
 
             // Programatically changes to the home page
             $.mobile.changePage( "#home" , { reverse: false, changeHash: false } );
+
+        },
+
+        about: function() {
+
+            $.mobile.changePage( "#about" , { reverse: false, changeHash: false } );
 
         },
 
@@ -127,9 +140,9 @@ define([
 
         },
 
-        pdfdownload: function() {
+        investor: function() {
 
-            $.mobile.changePage( "#pdfdownload" , { reverse: false, changeHash: false } );            
+            $.mobile.changePage( "#investor" , { reverse: false, changeHash: false } );            
         }
 
     } );
