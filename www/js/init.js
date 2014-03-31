@@ -17,6 +17,10 @@ define([
 
             // Disabling this will prevent jQuery Mobile from handling hash changes
             $.mobile.hashListeningEnabled = false;
+
+            // Set the page transition 
+            $.mobile.defaultPageTransition = "fade";
+
         }
     );
 

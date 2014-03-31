@@ -11,13 +11,11 @@
     var gaPlugin;
     
     function gaPluginResultHandler(result) {
-        //window.console && console.log('gaPluginResultHandler - ' + result);
-        alert('gaPluginResultHandler - ' + result);
+        window.console && console.log('gaPluginResultHandler - ' + result);
     }
 
     function gaPluginErrorHandler(error) {
-        //window.console && console.log('gaPluginErrorHandler - ' + error);
-        alert('gaPluginErrorHandler - ' + error);
+        window.console && console.log('gaPluginErrorHandler - ' + error);
     }
 
     document.addEventListener("deviceready", 
