@@ -10,6 +10,8 @@ var config = {
 
 	//Google Analytics
 	gaIdWeb: "UA-27585226-20", //Property Name = ATNI Boilerplate
-	gaIdApp: "UA-27585226-21" //App Name = ATNI Boilerplate app
+	gaIdApp: "UA-27585226-21", //App Name = ATNI Boilerplate app
 
+	//Livechatinc
+    liveChatIncLicense: "4184491"
 }

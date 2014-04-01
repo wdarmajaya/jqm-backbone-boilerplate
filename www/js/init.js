@@ -1,9 +1,16 @@
+// livechatinc
+var __lc = {};
+
+//Google Analytics    
+var _gaq = _gaq || [];
+
+
 // Includes file dependencies
 define([
     "jquery",
-], function( $ ) {
+    "config"
+], function( $, Config ) {
 
-    ///////////////////////////
     //JQM Init
     $( document ).on( "mobileinit",
 
@@ -24,15 +31,21 @@ define([
         }
     );
 
-    ///////////////////////////
     //Google Analytics for website init
-    var _gaq = _gaq || [];
-
     (function () {
         window.console && console.log("GA init");
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+
+    //Livechatinc
+    __lc.license = config.liveChatIncLicense;
+    (function() {
+    var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+    lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
     })();
 
 } );

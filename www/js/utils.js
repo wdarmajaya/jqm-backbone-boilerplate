@@ -31,7 +31,8 @@ var utils = {
         }
     },    
     //display alert using Bootstrap's alert
-    ////alertType = bootstrap's type (alert-success, alert-info, alert-warning, alert-danger)
+    //alert will be dismissed during pageshow event
+    //alertType = bootstrap's type (alert-success, alert-info, alert-warning, alert-danger)
     displayAlert: function (alertType, alertMessage) {
         var alertClass;
 
