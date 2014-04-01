@@ -11,10 +11,6 @@
     height:auto !important;
 }
 
-.my-header-logo {
-    margin: 0 !important;
-}
-
 /* Header */
 .my-header {
 	background: #fff;
@@ -218,6 +214,15 @@
 .my-navmenu-panel .ui-btn:after {
 	opacity: .4;
 	filter: Alpha(Opacity=40);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+	.my-header-logo {
+	    margin: 0 !important;
+	}
+
 }
 
 /* Desktop */
