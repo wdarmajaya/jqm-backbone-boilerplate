@@ -1,3 +1,11 @@
+.my-alert-messages {
+  position: fixed;
+  top: 10px;
+  left: 5px;
+  right: 5px;
+  z-index: 7000;
+}
+
 .my-home {
     min-height:83% !important;
     height:auto !important;
@@ -214,6 +222,15 @@
 
 /* Desktop */
 @media (min-width: 768px) {
+
+	.my-alert-messages {
+	  position: fixed;
+	  top: 10px;
+	  left: 25%;
+	  right: 25%;
+	  z-index: 7000;
+	  width: 50%;
+	}
 
 	.my-home {
 	    min-height:80% !important;

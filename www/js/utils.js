@@ -30,9 +30,32 @@ var utils = {
             window.open(targetURL, "_blank");
         }
     },    
-    handleError: function (errorCode, errorMessage) {
-        //TODO 
-        alert("Error " + errorCode + ":" + errorMessage);
-    }
+    //display alert using Bootstrap's alert
+    ////alertType = bootstrap's type (alert-success, alert-info, alert-warning, alert-danger)
+    displayAlert: function (alertType, alertMessage) {
+        var alertClass;
 
+        switch (alertType) {
+            case "SUCCESS": 
+                alertClass = "alert-success";
+                break;
+            case "INFO":
+                alertClass = "alert-info";
+                break;
+            case "WARNING":
+                alertClass = "alert-warning";
+                break;
+            case "ERROR":
+                alertClass = "alert-danger";
+                break;
+            default:
+                alertClass = "alert-danger";
+        }
+
+
+        $('.my-alert-messages').empty().append(
+            '<div class="alert ' + alertClass + ' alert-dismissable">' +
+                '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">' +
+                '&times;</button>' + alertMessage + '</div>');
+    }
 }

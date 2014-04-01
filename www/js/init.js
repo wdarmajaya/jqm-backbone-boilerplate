@@ -19,7 +19,7 @@ define([
             $.mobile.hashListeningEnabled = false;
 
             // Set the page transition 
-            $.mobile.defaultPageTransition = "fade";
+            $.mobile.defaultPageTransition = "none";
 
         }
     );

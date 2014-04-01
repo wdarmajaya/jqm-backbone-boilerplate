@@ -16,7 +16,8 @@ define([
     "views/InvestorView",
     "views/AboutView",
     "views/AdvantageView",
-    "views/NetworkView"
+    "views/NetworkView",
+    "utils"
 ], function( 
     $,
     Backbone,
@@ -31,7 +32,8 @@ define([
     InvestorView,
     AboutView,
     AdvantageView,
-    NetworkView
+    NetworkView,
+    Utils
     ) {
 
     // Extends Backbone.Router
@@ -141,7 +143,6 @@ define([
         },
 
         investor: function() {
-
             $.mobile.changePage( "#investor" , { reverse: false, changeHash: false } );            
         }
 

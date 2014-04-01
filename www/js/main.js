@@ -11,7 +11,9 @@ require.config( {
             "backbone": "../libs/backbone",
             "handlebars": "../libs/handlebars",
             "underscoretext": "../libs/text",
-            "fastclick": "../libs/fastclick"
+            "fastclick": "../libs/fastclick",
+            "bootstrap": "../libs/bootstrap.min",
+            "utils": "utils"
       },
 
       // Sets dependencies and also the configuration for your third party scripts that are not AMD compatible
@@ -23,6 +25,12 @@ require.config( {
             //backbone depends on underscore and jquery
             'backbone': ['underscore', 'jquery'],
 
+            //bootstrap depends on jquery
+            'bootstrap': ['jquery'],
+
+            //utils depends on jquery
+            'utils': ['jquery'],
+            
             "handlebars": {
                   "exports": "Handlebars"  //attaches "Handlebars" to the window object
             }
@@ -36,7 +44,8 @@ require.config( {
 
 require([ 
       "jquery",
-      "backbone", 
+      "backbone",
+      "bootstrap",       
       "router", 
       "fastclick",
       "init", 
@@ -44,7 +53,7 @@ require([
       "events", 
       "utils" 
       ], 
-      function ($, Backbone, Router, Fastclick, Init, Config, Events, Utils) {
+      function ($, Backbone, Bootstrap, Router, Fastclick, Init, Config, Events, Utils) {
 
       //if Phonegap/Cordova app
       if (document.location.protocol == 'file:') { 
