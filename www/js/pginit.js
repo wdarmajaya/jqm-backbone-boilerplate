@@ -1,31 +1,31 @@
-// Includes file dependencies
-// define([
-//     "jquery",
-//     "config",
-//     "fastclick"
-// ], function( $, Config, Fastclick ) {
-//TODO file dependencies causing issue with phonegap. gaPlugin cannot be referenced.
+var gaPlugin;
+
+function gaPluginResultHandler(result) {
+    window.console && console.log('gaPluginResultHandler - ' + result);
+}
+
+function gaPluginErrorHandler(error) {
+    window.console && console.log('gaPluginErrorHandler - ' + error);
+}
+
+//Includes file dependencies
+define([
+    "jquery",
+    "config",
+    "fastclick"
+], function( $, Config, fastclick ) {
     
     ///////////////////////////
     //Phonegap Init
-    var gaPlugin;
     
-    function gaPluginResultHandler(result) {
-        window.console && console.log('gaPluginResultHandler - ' + result);
-    }
-
-    function gaPluginErrorHandler(error) {
-        window.console && console.log('gaPluginErrorHandler - ' + error);
-    }
-
     document.addEventListener("deviceready", 
         function () {
            window.console && console.log("onDeviceReady Phonegap");
      
             //Fastclick eliminates 300ms delay on tapping on mobile browsers/webkit
-            FastClick.attach(document.body);  
+            var FastClick = require('fastclick');
+            FastClick.attach(document.body);
             window.console && console.log("Fastclick attached");
-
             $(".hidden-phonegap").remove();
             $(".fullwidth-phonegap").width("100%");
             
@@ -40,4 +40,4 @@
         true
     );
 
-// } );
+ } );
