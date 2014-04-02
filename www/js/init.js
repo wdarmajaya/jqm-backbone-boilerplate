@@ -48,4 +48,16 @@ define([
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
     })();
 
+
+    Offline.options = {
+        checks: {
+            image: {
+                url: function() {
+                   return 'http://atni.com/favicon.ico?_=' + (Math.floor(Math.random() * 1000000000));
+                }
+            },
+            active: 'image'
+        }
+    }
+
 } );

@@ -13,7 +13,8 @@ require.config( {
             "underscoretext": "../libs/text",
             "fastclick": "../libs/fastclick",
             "bootstrap": "../libs/bootstrap.min",
-            "utils": "utils"
+            "utils": "utils",
+            "alertify": "../libs/alertify.min"
       },
 
       // Sets dependencies and also the configuration for your third party scripts that are not AMD compatible
@@ -33,6 +34,10 @@ require.config( {
             
             "handlebars": {
                   "exports": "Handlebars"  //attaches "Handlebars" to the window object
+            },
+
+            "alertify": {
+                  "exports": "Alertify"
             }
 
       } // end Shim Configuration
@@ -51,9 +56,10 @@ require([
       "init", 
       "config", 
       "events", 
-      "utils" 
+      "utils",
+      "alertify"
       ], 
-      function ($, Backbone, Bootstrap, Router, Fastclick, Init, Config, Events, Utils) {
+      function ($, Backbone, Bootstrap, Router, Fastclick, Init, Config, Events, Utils, Alertify) {
 
       //if Phonegap/Cordova app
       if (document.location.protocol == 'file:') { 

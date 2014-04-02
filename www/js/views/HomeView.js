@@ -7,8 +7,9 @@ define([
 	"backbone",
     "handlebars",
     "../../libs/text!../../tpl/HomeTpl.html",
-    "../utils"
-], function( $, Backbone, Handlebars, Template, Utils ) {
+    "../utils",
+    "../config"
+], function( $, Backbone, Handlebars, Template, Utils, Config ) {
 
     // Extends Backbone.View
     var view = Backbone.View.extend( {
@@ -17,7 +18,8 @@ define([
             'click #btn-info': 'buttonInfo',
             'click #btn-warning': 'buttonWarning',
             'click #btn-error': 'buttonError',
-            'click #btn-default': 'buttonDefault'
+            'click #btn-default': 'buttonDefault',
+            'click #a-test-chat': 'aTestChat'
         },
         buttonSuccess: function() {
             utils.displayAlert("SUCCESS", "Testing SUCCESS alert message");
@@ -33,7 +35,10 @@ define([
         },
         buttonDefault: function() {
             utils.displayAlert("DEFAULT", "Testing DEFAULT alert message");
-        },                                
+        },
+        aTestChat: function() {
+            utils.openLinkExternal(config.liveChatIncMobileUrl);
+        },                             
         // The View Constructor
         initialize: function() {
         },

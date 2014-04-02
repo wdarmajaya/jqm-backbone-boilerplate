@@ -8,8 +8,6 @@ define([
 
     //Capture page show event for analytic
     $(document).on("pageshow", function () {
-        //Clear alert
-        $(".my-alert-messages").empty();
         
         //Google analytics
         try {

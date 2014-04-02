@@ -1,32 +1,33 @@
 <!doctype html>
 <html >
 <head>
-	<title>Backbone.js, Require.js, and jQuery Mobile</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Backbone.js, Require.js, and jQuery Mobile</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="libs/jquery.mobile.min.css">
-      <link rel="stylesheet" href="libs/bootstrap.min.css">
-      <link rel="stylesheet" href="libs/offline-theme-default.css">
-      <link rel="stylesheet" href="css/my.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
-      <!--<script type="text/javascript" src="libs/offline.min.js"></script>-->
+    <link rel="stylesheet" href="libs/jquery.mobile.min.css">
+    <link rel="stylesheet" href="libs/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/offline-theme-default.css">
+    <link rel="stylesheet" href="libs/alertify.core.css">
+    <link rel="stylesheet" href="libs/alertify.default.css">
+    <link rel="stylesheet" href="css/my.css">
 
-      <!-- Phonegap and plugins -->
-      <script type="text/javascript" src="phonegap.js"></script>
-      <script type="text/javascript" src="GAPlugin.js"></script>
-      <script type="text/javascript" src="childbrowser.js"></script>
-      <!-- Require -->
-      <script src="libs/require.js" data-main="js/main"></script>
+    <script type="text/javascript" src="libs/offline.min.js"></script>
+
+    <!-- Phonegap and plugins -->
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="GAPlugin.js"></script>
+    <script type="text/javascript" src="childbrowser.js"></script>
+    <!-- Require -->
+    <script src="libs/require.js" data-main="js/main"></script>
 </head>
 <body>
 
 <!-- Headers -->
 <div id="my-header-desktop" data-role="header" class="hidden-xs my-header"></div>
 <div id="my-header-mobile" data-role="header"  data-position="fixed" data-tap-toggle="false" class="visible-xs my-header"></div>
-
-<div class="my-alert-messages">
-</div>
 
 <!-- Menu Panel -->
 <div id="my-panel" data-role="panel" class="my-navmenu-panel" data-position="left" data-display="overlay" data-theme="a"></div>

@@ -13,5 +13,6 @@ var config = {
 	gaIdApp: "UA-27585226-21", //App Name = ATNI Boilerplate app
 
 	//Livechatinc
-    liveChatIncLicense: "4184491"
+    liveChatIncLicense: "4184491",
+    liveChatIncMobileUrl: "https://secure.livechatinc.com/licence/4184491/open_chat.cgi"
 }
