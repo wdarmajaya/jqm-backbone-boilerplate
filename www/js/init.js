@@ -11,6 +11,9 @@ define([
     "config"
 ], function( $, Config ) {
 
+    //Set the favicon
+    $("#my-favicon").attr("href", config.propertyFavIcon);
+
     //JQM Init
     $( document ).on( "mobileinit",
 
@@ -48,12 +51,12 @@ define([
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
     })();
 
-
+    //offline.js init
     Offline.options = {
         checks: {
             image: {
                 url: function() {
-                   return 'http://atni.com/favicon.ico?_=' + (Math.floor(Math.random() * 1000000000));
+                   return config.offlineCheckImgUrl + '?_=' + (Math.floor(Math.random() * 1000000000));
                 }
             },
             active: 'image'

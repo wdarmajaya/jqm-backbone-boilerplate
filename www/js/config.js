@@ -6,7 +6,8 @@ var config = {
 	propertyContactPhoneDisplay: "1.978.619.1300",
 	propertyContactPhoneLink: "+19786191300",
 	propertyHomePageUrl: "http://atni.com",
-	propertyLogoSrc: "img/atn-logo.jpg",
+	propertyLogoSrc: "img/atni/atn-logo.jpg",
+	propertyFavIcon: "img/atni/favicon.ico",
 
 	//Google Analytics
 	gaIdWeb: "UA-27585226-20", //Property Name = ATNI Boilerplate
@@ -14,5 +15,8 @@ var config = {
 
 	//Livechatinc
     liveChatIncLicense: "4184491",
-    liveChatIncMobileUrl: "https://secure.livechatinc.com/licence/4184491/open_chat.cgi"
+    liveChatIncMobileUrl: "https://secure.livechatinc.com/licence/4184491/open_chat.cgi",
+
+    //offline.js
+    offlineCheckImgUrl: "http://atni.com/favicon.ico"
 }
