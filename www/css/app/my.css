@@ -13,7 +13,7 @@
 /* Header */
 .my-header {
 	background: #fff;
-	border-top: 4px solid #013668;
+	border-top: 4px solid #013668; /* property override */
 	border-bottom-color: #eee;
 }
 .my-header h2 {
@@ -63,7 +63,7 @@
 	padding-bottom: 0;
 }
 .my-footer {
-	border-top: 1px solid #013668;
+	border-top: 1px solid #013668; /* Property override */
 	height: 100px;
 }
 .my-footer p {
@@ -98,7 +98,7 @@
 	margin: 0 0 .625em;
 }
 .my-app .my-content > h2 {
-	color: #013668;
+	color: #013668; /* property override */
 	background-color: transparent;
 	border-bottom: 1px solid #ddd;
 	font-size: 1.6em;
@@ -106,9 +106,10 @@
 	margin: 0 0 .7375em;
 }
 .my-app .my-content > h3 {
-	color: #3eb249;
+	color: #000000; /* property override */
 	background-color: transparent;
-	font-size: 1.4em;
+	font-size: 1.2em;
+	font-weight: bold;
 	margin: 0 0 1em;
 }
 .my-app .my-content > p {
@@ -219,9 +220,9 @@
 @media (max-width: 768px) {
 
 /* fix for logo being cut off on mobile */
-/*	.my-header-logo {
+	.my-header-logo {
 	    margin: 0 !important;
-	}*/
+	}
 }
 
 /* Desktop */

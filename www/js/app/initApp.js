@@ -21,10 +21,6 @@ define([
     FastClick.attach(document.body);
     window.console && console.log("initApp/Fastclick attached");
 
-    //Phonegap speficic elements
-    $(".hidden-phonegap").remove();
-    $(".fullwidth-phonegap").width("100%");
-
     //Initialize Google Analytics for app
     gaPlugin = window.plugins.gaPlugin;
     gaPlugin.init(gaPluginResultHandler, gaPluginErrorHandler, Config.gaIdApp, 10);

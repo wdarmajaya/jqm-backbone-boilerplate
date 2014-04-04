@@ -5,8 +5,8 @@ define({
 	propertyContactPhoneDisplay: "1.978.619.1300",
 	propertyContactPhoneLink: "+19786191300",
 	propertyHomePageUrl: "http://atni.com",
-	propertyLogoSrc: "css/images/atni/atn-logo.jpg",
-	propertyFavIcon: "css/images/atni/favicon.ico",
+	propertyLogoSrc: "css/app/images/atni/atn-logo.jpg",
+	propertyFavIcon: "css/app/images/atni/favicon.ico",
 
 	//Google Analytics
 	gaIdWeb: "UA-27585226-20", //Property Name = ATNI Boilerplate
