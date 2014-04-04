@@ -16,8 +16,11 @@ define([
             // Disabling this will prevent jQuery Mobile from handling hash changes
             $.mobile.hashListeningEnabled = false;
 
-            // Set the page transition 
+            // Disable some features for performance gain
             $.mobile.defaultPageTransition = "none";
+            $.mobile.defaultDialogTransition = 'none';
+            $.mobile.activeBtnClass = 'unused';
+            $.mobile.buttonMarkup.hoverDelay = 0;
 
             window.console && console.log("init/JQM mobileinit");
 

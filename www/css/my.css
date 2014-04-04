@@ -218,9 +218,10 @@
 /* Mobile */
 @media (max-width: 768px) {
 
-	.my-header-logo {
+/* fix for logo being cut off on mobile */
+/*	.my-header-logo {
 	    margin: 0 !important;
-	}
+	}*/
 }
 
 /* Desktop */

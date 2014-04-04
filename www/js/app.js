@@ -38,7 +38,7 @@ require.config( {
 
 } );
 
-//If this is phonegap app
+//If this is phonegap app, calls initApp
 if (document.location.protocol === 'file:') {
       
       //Wait for phonegap's ondeviceready
@@ -51,13 +51,14 @@ if (document.location.protocol === 'file:') {
             });
       }
 }
-//Web
+//For web app, calls initWeb
 else {
       require(["app/initWeb"], function() {
             initialize();
       });
 }
 
+//Initialiazes jquery mobile and global events, and instantiates backbone router
 function initialize() {
       require(["app/init", "app/events"], function() {
             //Wait for init.js loaded before loading jqm
