@@ -6,9 +6,9 @@ define([
 	"jquery",
 	"backbone",
     "handlebars",
-    "../../libs/text!../../tpl/HomeTpl.html",
-    "../utils",
-    "../config"
+    "text!app/templates/Home.html",
+    "app/utils",
+    "app/config"
 ], function( $, Backbone, Handlebars, Template, Utils, Config ) {
 
     // Extends Backbone.View
@@ -22,22 +22,22 @@ define([
             'click #a-test-chat': 'aTestChat'
         },
         buttonSuccess: function() {
-            utils.displayAlert("SUCCESS", "Testing SUCCESS alert message");
+            Utils.displayAlert("SUCCESS", "Testing SUCCESS alert message");
         },
         buttonInfo: function() {
-            utils.displayAlert("INFO", "Testing INFO alert message");
+            Utils.displayAlert("INFO", "Testing INFO alert message");
         },
         buttonWarning: function() {
-            utils.displayAlert("WARNING", "Testing WARNING alert message");
+            Utils.displayAlert("WARNING", "Testing WARNING alert message");
         },
         buttonError: function() {
-            utils.displayAlert("ERROR", "Testing ERROR alert message");
+            Utils.displayAlert("ERROR", "Testing ERROR alert message. <br/> This is a really long error message. How does it look?");
         },
         buttonDefault: function() {
-            utils.displayAlert("DEFAULT", "Testing DEFAULT alert message");
+            Utils.displayAlert("DEFAULT", "Testing DEFAULT alert message");
         },
         aTestChat: function() {
-            utils.openLinkExternal(config.liveChatIncMobileUrl);
+            Utils.openLinkExternal(Config.liveChatIncMobileUrl);
         },                             
         // The View Constructor
         initialize: function() {

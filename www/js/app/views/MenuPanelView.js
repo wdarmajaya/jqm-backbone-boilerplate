@@ -1,4 +1,4 @@
-// About View
+// Category View
 // =============
 
 // Includes file dependencies
@@ -6,7 +6,7 @@ define([
 	"jquery",
 	"backbone",
     "handlebars",
-    "../../libs/text!../../tpl/AboutTpl.html"
+    "text!app/templates/MenuPanel.html"
 ], function( $, Backbone, Handlebars, Template ) {
 
     // Extends Backbone.View
@@ -23,9 +23,12 @@ define([
             var html = template();
             this.$el.html(html);
 
+            // Refresh the JQM elements
+            $( "[data-role='panel']" ).panel();
+            $( ".my-navmenu-panel ul" ).listview();
+
             // Maintains chainability
             return this;
-
         }
 
     } );

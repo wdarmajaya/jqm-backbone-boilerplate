@@ -7,21 +7,25 @@
 
     <link id="my-favicon" rel="icon" href="" type="image/x-icon">
 
-    <link rel="stylesheet" href="libs/jquery.mobile.min.css">
-    <link rel="stylesheet" href="libs/bootstrap.min.css">
-    <link rel="stylesheet" href="libs/offline-theme-default.css">
-    <link rel="stylesheet" href="libs/alertify.core.css">
-    <link rel="stylesheet" href="libs/alertify.default.css">
+    <link rel="stylesheet" href="css/jquery.mobile.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/offline-theme-default.css">
+    <link rel="stylesheet" href="css/alertify.core.css">
+    <link rel="stylesheet" href="css/alertify.default.css">
     <link rel="stylesheet" href="css/my.css">
 
-    <script type="text/javascript" src="libs/offline.min.js"></script>
-
+    <!--TODO This won't work on Phonegap with requirejs and crashes android app
+    <script type="text/javascript" src="js/lib/offline.js"></script>
+    -->
+    
+    <!-- Require -->
+    <script data-main="js/app" src="js/lib/require.js"></script>
+    
     <!-- Phonegap and plugins -->
     <script type="text/javascript" src="phonegap.js"></script>
     <script type="text/javascript" src="GAPlugin.js"></script>
     <script type="text/javascript" src="childbrowser.js"></script>
-    <!-- Require -->
-    <script src="libs/require.js" data-main="js/main"></script>
+
 </head>
 <body>
 

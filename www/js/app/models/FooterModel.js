@@ -5,16 +5,16 @@
 define([
 	"jquery",
 	"backbone",
-    "config"
+    "app/config"
 ], function( $, Backbone, Config ) {
 
     // The Model constructor
     var Model = Backbone.Model.extend( {
     	defaults: {
-	    	"propertyName": config.propertyName,
-	    	"propertyContactPhoneLink": config.propertyContactPhoneLink,
-            "propertyContactPhoneDisplay": config.propertyContactPhoneDisplay,
-	    	"propertyStreetAddress": config.propertyStreetAddress    		
+	    	"propertyName": Config.propertyName,
+	    	"propertyContactPhoneLink": Config.propertyContactPhoneLink,
+            "propertyContactPhoneDisplay": Config.propertyContactPhoneDisplay,
+	    	"propertyStreetAddress": Config.propertyStreetAddress    		
     	}
     } );
 

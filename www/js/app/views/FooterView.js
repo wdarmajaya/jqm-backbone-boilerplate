@@ -6,8 +6,9 @@ define([
 	"jquery",
 	"backbone",
     "handlebars",
-    "../../libs/text!../../tpl/MenuPanelTpl.html"
-], function( $, Backbone, Handlebars, Template ) {
+    "../models/FooterModel",
+    "text!app/templates/Footer.html"
+], function( $, Backbone, Handlebars, Model, Template ) {
 
     // Extends Backbone.View
     var view = Backbone.View.extend( {
@@ -17,15 +18,14 @@ define([
         },
 
         // Renders all of the Category models on the UI
-        render: function() {
+        render: function() {            
             // Sets the view's template property
             var template = Handlebars.compile(Template);            
-            var html = template();
+            var html = template(this.model.toJSON());
             this.$el.html(html);
 
-            // Refresh the JQM elements
-            $( "[data-role='panel']" ).panel();
-            $( ".my-navmenu-panel ul" ).listview();
+            // Refresh footer
+            $( "[data-role='footer']" ).toolbar();
 
             // Maintains chainability
             return this;

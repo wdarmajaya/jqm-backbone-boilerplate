@@ -5,7 +5,7 @@
 define([
 	"jquery",
 	"backbone",
-	"../models/CategoryModel" ], function( $, Backbone, CategoryModel ) {
+	"app/models/CategoryModel" ], function( $, Backbone, CategoryModel ) {
 
     // Extends Backbone.Router
     var Collection = Backbone.Collection.extend( {

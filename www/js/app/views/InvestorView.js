@@ -6,9 +6,8 @@ define([
 	"jquery",
 	"backbone",
     "handlebars",
-    "../models/FooterModel",
-    "../../libs/text!../../tpl/FooterTpl.html"
-], function( $, Backbone, Handlebars, Model, Template ) {
+    "text!app/templates/Investor.html"
+], function( $, Backbone, Handlebars, Template ) {
 
     // Extends Backbone.View
     var view = Backbone.View.extend( {
@@ -18,14 +17,11 @@ define([
         },
 
         // Renders all of the Category models on the UI
-        render: function() {            
+        render: function() {
             // Sets the view's template property
             var template = Handlebars.compile(Template);            
-            var html = template(this.model.toJSON());
+            var html = template();
             this.$el.html(html);
-
-            // Refresh footer
-            $( "[data-role='footer']" ).toolbar();
 
             // Maintains chainability
             return this;

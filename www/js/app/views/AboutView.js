@@ -1,4 +1,4 @@
-// Category View
+// About View
 // =============
 
 // Includes file dependencies
@@ -6,7 +6,7 @@ define([
 	"jquery",
 	"backbone",
     "handlebars",
-    "../../libs/text!../../tpl/InvestorTpl.html"
+    "text!app/templates/About.html"
 ], function( $, Backbone, Handlebars, Template ) {
 
     // Extends Backbone.View
@@ -25,6 +25,7 @@ define([
 
             // Maintains chainability
             return this;
+
         }
 
     } );

@@ -5,15 +5,15 @@
 define([
 	"jquery",
 	"backbone",
-    "config"
+    "app/config"
 ], function( $, Backbone, Config ) {
 
     // The Model constructor
     var Model = Backbone.Model.extend( {
     	defaults: {
-	    	"propertyHomePageUrl": config.propertyHomePageUrl,
-	    	"propertyLogoSrc": config.propertyLogoSrc,
-	    	"propertyName": config.propertyName    		
+	    	"propertyHomePageUrl": Config.propertyHomePageUrl,
+	    	"propertyLogoSrc": Config.propertyLogoSrc,
+	    	"propertyName": Config.propertyName    		
     	}
     } );
 

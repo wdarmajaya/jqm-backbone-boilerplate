@@ -1,3 +1,10 @@
+/* Fixed alertify clash with livechat */
+.alertify-logs {
+	bottom: 40px;
+	right: 15px;
+	width: 250px;
+}
+
 .my-home {
     min-height:85% !important;
     height:auto !important;
@@ -218,11 +225,6 @@
 
 /* Desktop */
 @media (min-width: 768px) {
-
-	.alertify-logs {
-	    top: 10px;
-	    right: 10px;
-	}
 
 	.my-home {
 	    min-height:80% !important;

@@ -6,8 +6,8 @@ define([
 	"jquery",
 	"backbone",
     "handlebars",
-	"../models/CategoryModel",
-    "../../libs/text!../../tpl/AdvantageTpl.html"
+	"app/models/CategoryModel",
+    "text!app/templates/Advantage.html"
 ], function( $, Backbone, Handlebars, CategoryModel, Template ) {
 
     // Extends Backbone.View
